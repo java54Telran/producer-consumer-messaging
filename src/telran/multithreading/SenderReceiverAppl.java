@@ -5,7 +5,13 @@ import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
 public class SenderReceiverAppl {
-
+//TODO for HW #44 (ConsumerReceiver should not be updated)
+	//Provide functionality of dispatching
+	//Even messages must be processed by receiver threads with even id
+	//Odd messages must be processed by receiver threads with odd id
+	//Hints two message boxes: one for even messages and other for odd messages
+	
+	
 	private static final int N_MESSAGES = 2000;
 	private static final int N_RECEIVERS = 10;
 

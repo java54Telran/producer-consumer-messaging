@@ -17,11 +17,13 @@ public class ConsumerReceiver extends Thread {
 				processMessage(message);
 			} catch (InterruptedException e) {
 				running = false;
-				while(!messageBox.isEmpty()) {
-					processMessage(messageBox.remove());
-				}
+				
 			}
+    		
     	}
+    	while(!messageBox.isEmpty()) {
+			processMessage(messageBox.remove());
+		}
     }
 	private void processMessage(String message) {
 		System.out.printf("Thread %s - %s\n", getName(), message);
